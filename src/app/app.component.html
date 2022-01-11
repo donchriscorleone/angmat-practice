@@ -1,3 +1,4 @@
+<div class="input">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Favorite food</mat-label>
     <input ngModel #food="ngModel" name="food" matInput placeholder="Ex. Pizza" value="Sushi" required>
@@ -5,3 +6,46 @@
       Food is required
     </mat-error>
   </mat-form-field>
+</div>
+
+<div class="buttons">
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <button mat-raised-button color="warn">Warn</button>
+  <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <button mat-mini-fab color="warn" aria-label="Example icon button with a menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
+
+<div class="checkboxes">
+  <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+  <mat-checkbox class="example-margin" [disabled]="true" labelPosition="before">Before Label</mat-checkbox>
+</div>
+
+<div class="radioboxes">
+  <mat-radio-group aria-label="Select a gender" ngModel #gender="ngModel">
+    <mat-radio-button [value]="'male'">Male</mat-radio-button>
+    <mat-radio-button [value]="'female'">Female</mat-radio-button>
+  </mat-radio-group>
+  <p>You are a {{gender.value}}</p>
+</div>
+
+<div class="select">
+  <mat-form-field appearance="fill">
+    <mat-label>Payment Method</mat-label>
+    <mat-select required ngModel #select="ngModel">
+      <mat-option>None</mat-option>
+      <mat-option [value]="'Cash on Delivery'">Cash on Deliver</mat-option>
+      <mat-option [value]="'Credit Card'">Credit Card</mat-option>
+      <mat-option [value]="'Debit Card'">Debit Card</mat-option>
+    </mat-select>
+    <mat-error *ngIf="select.hasError('required')">You must make a choice.</mat-error>
+    <mat-hint>Choose your desired payment method</mat-hint>
+  </mat-form-field>
+</div>
