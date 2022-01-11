@@ -49,3 +49,19 @@
     <mat-hint>Choose your desired payment method</mat-hint>
   </mat-form-field>
 </div>
+
+<div class="date-picker">
+  <mat-form-field appearance="outline">
+    <mat-label>Birthdate</mat-label>
+    <input matInput [matDatepicker]="datePicker">
+    <mat-datepicker-toggle matPrefix [for]="datePicker"></mat-datepicker-toggle>
+    <mat-datepicker #datePicker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<div class="tab">
+  <mat-tab-group>
+    <mat-tab label="First">Billing</mat-tab>
+    <mat-tab label="Second">Shipping</mat-tab>
+  </mat-tab-group>
+</div>

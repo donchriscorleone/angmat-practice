@@ -13,7 +13,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,13 +25,17 @@ import {MatSelectModule} from '@angular/material/select';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+
     MatInputModule,
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
